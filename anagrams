@@ -1,0 +1,12 @@
+def anagrams_grp(words):
+    anagrams={}
+    for ch in words:
+        key=''.join(sorted(ch))
+        if key in anagrams:
+            anagrams[key].append(ch)
+        else:
+            anagrams[key]=[ch]
+    return list(anagrams.values())
+res=anagrams_grp(["eat","tea","tan","ate","nat","bat"])
+print(res)
+          
